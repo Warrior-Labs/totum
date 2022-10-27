@@ -1,0 +1,36 @@
+@import 'variables';
+
+.Pill {
+  border-radius: var(--border-radius-lg, $border-radius-lg);
+  padding: var(--padding-sm, $padding-sm) var(--padding-lg, $padding-lg);
+  margin: 0 0.2rem;
+  background-color: var(--default-color, $default-color);
+  color: var(--default-color-overlay, $default-color-overlay);
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  &.primary {
+    background-color: var(--primary-color, $primary-color);
+    color: var(--primary-color-overlay, $primary-color-overlay);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color, $secondary-color);
+    color: var(--secondary-color-overlay, $secondary-color-overlay);
+  }
+
+  &.success {
+    background-color: var(--success-color, $success-color);
+    color: var(--success-color-overlay, $success-color-overlay);
+  }
+
+  &.danger {
+    background-color: var(--danger-color, $danger-color);
+    color: var(--danger-color-overlay, $danger-color-overlay);
+  }
+
+  &.warning {
+    background-color: var(--warning-color, $warning-color);
+    color: var(--warning-color-overlay, $warning-color-overlay);
+  }
+}

@@ -1,0 +1,175 @@
+@import 'variables';
+
+.Button {
+  font-family: var(--body-font-family, $body-font-family);
+  font-size: var(--body-font-size, $body-font-size);
+  font-weight: 600;
+  border-radius: var(--border-radius, $border-radius);
+  border: 1px solid var(--overlay-5, $overlay-5);
+  background: linear-gradient(
+    var(--default-color, $default-color) 20%,
+    var(--default-color-dark, $default-color-dark) 80%
+  );
+  color: var(--default-color-overlay, $default-color-overlay);
+  cursor: pointer;
+  padding: $padding $padding-lg;
+
+  > svg {
+    fill: var(--default-color-overlay, $default-color-overlay);
+  }
+
+  &:hover {
+    background: linear-gradient(
+      var(--default-color-dark, $default-color-dark) 20%,
+      var(--default-color, $default-color) 80%
+    );
+  }
+
+  &.flat {
+    background: var(--default-color, $default-color);
+
+    &:hover {
+      background: var(--default-color-dark, $default-color-dark);
+    }
+  }
+
+  &.primary {
+    text-shadow: 0 -1px 0 $overlay-25;
+    background: linear-gradient(
+      var(--primary-color, $primary-color) 20%,
+      var(--primary-color-dark, $primary-color-dark) 80%
+    );
+    color: var(--primary-color-overlay, $primary-color-overlay);
+
+    > svg {
+      fill: var(--primary-color-overlay, $primary-color-overlay);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        var(--primary-color-dark, $primary-color-dark) 20%,
+        var(--primary-color, $primary-color) 80%
+      );
+    }
+
+    &.flat {
+      background: var(--primary-color, $primary-color);
+
+      &:hover {
+        background: var(--primary-color-dark, $primary-color-dark);
+      }
+    }
+  }
+
+  &.secondary {
+    text-shadow: 0 -1px 0 $overlay-25;
+    background: linear-gradient(
+      var(--secondary-color, $secondary-color) 20%,
+      var(--secondary-color-dark, $secondary-color-dark) 80%
+    );
+    color: var(--secondary-color-overlay, $secondary-color-overlay);
+
+    > svg {
+      fill: var(--secondary-color-overlay, $secondary-color-overlay);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        var(--secondary-color-dark, $secondary-color-dark) 20%,
+        var(--secondary-color, $secondary-color) 80%
+      );
+    }
+
+    &.flat {
+      background: var(--secondary-color, $secondary-color);
+
+      &:hover {
+        background: var(--secondary-color-dark, $secondary-color-dark);
+      }
+    }
+  }
+
+  &.success {
+    text-shadow: 0 -1px 0 $overlay-25;
+    background: linear-gradient(
+      var(--success-color, $success-color) 20%,
+      var(--success-color-dark, $success-color-dark) 80%
+    );
+    color: var(--success-color-overlay, $success-color-overlay);
+
+    > svg {
+      fill: var(--success-color-overlay, $success-color-overlay);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        var(--success-color-dark, $success-color-dark) 20%,
+        var(--success-color, $success-color) 80%
+      );
+    }
+
+    &.flat {
+      background: var(--success-color, $success-color);
+
+      &:hover {
+        background: var(--success-color-dark, $success-color-dark);
+      }
+    }
+  }
+
+  &.danger {
+    text-shadow: 0 -1px 0 $overlay-25;
+    background: linear-gradient(
+      var(--danger-color, $danger-color) 20%,
+      var(--danger-color-dark, $danger-color-dark) 80%
+    );
+    color: var(--danger-color-overlay, $danger-color-overlay);
+
+    > svg {
+      fill: var(--danger-color-overlay, $danger-color-overlay);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        var(--danger-color-dark, $danger-color-dark) 20%,
+        var(--danger-color, $danger-color) 80%
+      );
+    }
+
+    &.flat {
+      background: var(--danger-color, $danger-color);
+
+      &:hover {
+        background: var(--danger-color-dark, $danger-color-dark);
+      }
+    }
+  }
+
+  &.warning {
+    text-shadow: 0 -1px 0 $overlay-25;
+    background: linear-gradient(
+      var(--warning-color, $warning-color) 20%,
+      var(--warning-color-dark, $warning-color-dark) 80%
+    );
+    color: var(--warning-color-overlay, $warning-color-overlay);
+
+    > svg {
+      fill: var(--warning-color-overlay, $warning-color-overlay);
+    }
+
+    &:hover {
+      background: linear-gradient(
+        var(--warning-color-dark, $warning-color-dark) 20%,
+        var(--warning-color, $warning-color) 80%
+      );
+    }
+
+    &.flat {
+      background: var(--warning-color, $warning-color);
+
+      &:hover {
+        background: var(--warning-color-dark, $warning-color-dark);
+      }
+    }
+  }
+}

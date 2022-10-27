@@ -1,0 +1,72 @@
+@import 'variables';
+
+/**
+ * Alert Styles
+ */
+.Alert {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--border-radius, $border-radius);
+  padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
+  display: flex;
+  align-items: center;
+  margin: var(--margin-sm, $margin-sm) 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  > svg {
+    margin-right: var(--padding, $padding);
+  }
+
+  &.primary {
+    background: var(--primary-color-dark, $primary-color-dark);
+    color: var(--primary-color-overlay, $primary-color-overlay);
+
+    > svg {
+      fill: var(--primary-color-overlay, $primary-color-overlay);
+      stroke: var(--primary-color-overlay, $primary-color-overlay);
+    }
+  }
+
+  &.secondary {
+    background: var(--secondary-color-dark, $secondary-color-dark);
+    color: var(--secondary-color-overlay, $secondary-color-overlay);
+
+    > svg {
+      fill: var(--secondary-color-overlay, $secondary-color-overlay);
+      stroke: var(--secondary-color-overlay, $secondary-color-overlay);
+    }
+  }
+
+  &.success {
+    background: var(--success-color-dark, $success-color-dark);
+    color: var(--success-color-overlay, $success-color-overlay);
+
+    > svg {
+      fill: var(--success-color-overlay, $success-color-overlay);
+      stroke: var(--success-color-overlay, $success-color-overlay);
+    }
+  }
+
+  &.warning {
+    background: var(--warning-color-dark, $warning-color-dark);
+    color: var(--warning-color-overlay, $warning-color-overlay);
+
+    > svg {
+      fill: var(--warning-color-overlay, $warning-color-overlay);
+      stroke: var(--warning-color-overlay, $warning-color-overlay);
+    }
+  }
+
+  &.danger {
+    background: var(--danger-color-dark, $danger-color-dark);
+    color: var(--danger-color-overlay, $danger-color-overlay);
+
+    > svg {
+      fill: var(--danger-color-overlay, $danger-color-overlay);
+      stroke: var(--danger-color-overlay, $danger-color-overlay);
+    }
+  }
+}

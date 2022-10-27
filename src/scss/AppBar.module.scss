@@ -1,0 +1,38 @@
+@import 'variables';
+
+.AppBar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  background-color: var(--default-color, $default-color);
+  color: var(--default-color-overlay, $default-color-overlay);
+
+  &.primary {
+    background-color: var(--primary-color, $primary-color);
+    color: var(--primary-color-overlay, $primary-color-overlay);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color, $secondary-color);
+    color: var(--secondary-color-overlay, $secondary-color-overlay);
+  }
+
+  &.success {
+    background-color: var(--success-color, $success-color);
+    color: var(--success-color-overlay, $success-color-overlay);
+  }
+
+  &.warning {
+    background-color: var(--warning-color, $warning-color);
+    color: var(--warning-color-overlay, $warning-color-overlay);
+  }
+
+  &.danger {
+    background-color: var(--danger-color, $danger-color);
+    color: var(--danger-color-overlay, $danger-color-overlay);
+  }
+}

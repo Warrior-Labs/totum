@@ -1,0 +1,72 @@
+/**
+ * Style Variables
+ */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+// Typography
+$body-font-family: 'Assistant', sans-serif;
+$body-font-size: 14px;
+$title-font-family: 'Assistant', sans-serif;
+$code-font-family: 'Ubuntu Mono', monospace;
+
+// Colors
+$default-overlay: #111;
+
+$default-color: #efefef;
+$default-color-overlay: #444;
+$default-color-highlight: #ffc745;
+$default-color-dark: darken($default-color, 5%);
+$default-color-light: lighten($default-color, 5%);
+
+$primary-color: #0092e5;
+$primary-color-overlay: #fff;
+$primary-color-highlight: #ffc745;
+$primary-color-dark: darken($primary-color, 5%);
+$primary-color-light: lighten($primary-color, 5%);
+
+$secondary-color: #19b0c5;
+$secondary-color-overlay: #fff;
+$secondary-color-highlight: #ffc745;
+$secondary-color-dark: darken($secondary-color, 5%);
+$secondary-color-light: lighten($secondary-color, 5%);
+
+$success-color: #289a3e;
+$success-color-overlay: #fff;
+$success-color-dark: darken($success-color, 5%);
+$success-color-light: lighten($success-color, 5%);
+
+$warning-color: #fcb205;
+$warning-color-overlay: #fff;
+$warning-color-dark: darken($warning-color, 5%);
+$warning-color-light: lighten($warning-color, 5%);
+
+$danger-color: #c93737;
+$danger-color-overlay: #fff;
+$danger-color-dark: darken($danger-color, 5%);
+$danger-color-light: lighten($danger-color, 5%);
+
+$overlay-5: rgba(0, 0, 0, 0.05);
+$overlay-10: rgba(0, 0, 0, 0.1);
+$overlay-15: rgba(0, 0, 0, 0.15);
+$overlay-20: rgba(0, 0, 0, 0.2);
+$overlay-25: rgba(0, 0, 0, 0.25);
+$overlay-50: rgba(0, 0, 0, 0.5);
+
+// Borders
+$border-radius: 0.4rem;
+$border-radius-sm: 0.2rem;
+$border-radius-lg: 0.8rem;
+
+// Padding
+$padding: 0.4rem;
+$padding-sm: 0.2rem;
+$padding-lg: 0.8rem;
+
+// Margin
+$margin: 0.4rem;
+$margin-sm: 0.2rem;
+$margin-lg: 0.8rem;
+
+// Component-Specific
+$app-drawer-width: 280px;

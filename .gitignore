@@ -1,0 +1,8 @@
+# Node Modules
+node_modules
+
+# Build Outputs
+dist
+
+# MacOS Finder Conf
+.DS_Store

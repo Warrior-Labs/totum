@@ -1,0 +1,164 @@
+@use 'sass:math';
+@import 'variables';
+
+/**
+ * Action Menu Styles
+ */
+$action-menu-delay: 0.25s;
+$action-menu-gap: 8px;
+.ActionMenu {
+  position: relative;
+  display: inline-block;
+
+  > .ActionMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > * {
+      pointer-events: none;
+    }
+
+    > svg {
+      margin-left: var(--margin, $margin);
+    }
+  }
+
+  > .ActionMenuList {
+    list-style-type: none;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    min-width: 100%;
+    margin: math.div($action-menu-gap, 2) 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius, $border-radius);
+    height: auto;
+    z-index: 99;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    -webkit-animation: fadeIn $action-menu-delay ease-in-out;
+    animation: fadeIn $action-menu-delay ease-in-out;
+
+    &::before {
+      top: -($action-menu-gap * 2);
+      left: $action-menu-gap + 1;
+      border: $action-menu-gap solid transparent;
+      border-bottom: $action-menu-gap solid #ddd;
+      position: absolute;
+      display: inline-block;
+      content: '';
+    }
+
+    &::after {
+      top: -(($action-menu-gap - 1) * 2);
+      left: $action-menu-gap + 2;
+      border: ($action-menu-gap - 1) solid transparent;
+      border-bottom: ($action-menu-gap - 1) solid white;
+      position: absolute;
+      display: inline-block;
+      content: '';
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    > .ActionMenuItem {
+      > * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        padding: var(--padding, $padding);
+        width: 100%;
+      }
+
+      &:first-of-type > * {
+        border-top-left-radius: var(--border-radius, $border-radius);
+        border-top-right-radius: var(--border-radius, $border-radius);
+      }
+
+      &:last-of-type > * {
+        border-bottom-left-radius: var(--border-radius, $border-radius);
+        border-bottom-right-radius: var(--border-radius, $border-radius);
+      }
+
+      &.separator {
+        > span {
+          display: block;
+          height: 1px;
+          padding: 0;
+        }
+      }
+
+      > a,
+      button {
+        font-family: var(--body-font-family, $body-font-family);
+        font-size: var(--body-font-size, $body-font-size);
+        font-weight: 500;
+        text-align: left;
+        text-decoration: none;
+        border: none;
+        background: white;
+        color: var(--default-color-overlay, $default-color-overlay);
+        cursor: pointer;
+
+        &:hover {
+          background: var(--default-color, $default-color);
+          color: var(--default-color-overlay, $default-color-overlay);
+        }
+
+        &.primary {
+          background: var(--primary-color-overlay, $primary-color-overlay);
+          color: var(--primary-color, $primary-color);
+
+          &:hover {
+            background: var(--primary-color, $primary-color);
+            color: var(--primary-color-overlay, $primary-color-overlay);
+          }
+        }
+
+        &.secondary {
+          background: var(--secondary-color-overlay, $secondary-color-overlay);
+          color: var(--secondary-color, $secondary-color);
+
+          &:hover {
+            background: var(--secondary-color, $secondary-color);
+            color: var(--secondary-color-overlay, $secondary-color-overlay);
+          }
+        }
+
+        &.success {
+          background: var(--success-color-overlay, $success-color-overlay);
+          color: var(--success-color, $success-color);
+
+          &:hover {
+            background: var(--success-color, $success-color);
+            color: var(--success-color-overlay, $success-color-overlay);
+          }
+        }
+
+        &.warning {
+          background: var(--warning-color-overlay, $warning-color-overlay);
+          color: var(--warning-color, $warning-color);
+
+          &:hover {
+            background: var(--warning-color, $warning-color);
+            color: var(--warning-color-overlay, $warning-color-overlay);
+          }
+        }
+
+        &.danger {
+          background: var(--danger-color-overlay, $danger-color-overlay);
+          color: var(--danger-color, $danger-color);
+
+          &:hover {
+            background: var(--danger-color, $danger-color);
+            color: var(--danger-color-overlay, $danger-color-overlay);
+          }
+        }
+      }
+    }
+  }
+}

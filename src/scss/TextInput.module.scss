@@ -1,0 +1,102 @@
+@import 'variables';
+
+.FormControl {
+  display: flex;
+  flex-direction: column-reverse;
+
+  > .InputLabel {
+    position: relative;
+    transition: top 100ms ease-in-out;
+    top: calc(
+      1rem + var(--padding, $padding) + var(--padding, $padding) +
+        var(--padding-sm, $padding-sm) + var(--padding-sm, $padding-sm)
+    );
+    left: calc(var(--padding-sm, $padding-sm) + 1px);
+    display: block;
+    font-weight: 500;
+    height: 1.2rem;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  > .TextInput {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: $body-font-family;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    resize: none;
+    border-radius: var(--border-radius, $border-radius);
+    padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        color: #ddd;
+      }
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      transition: top 100ms ease-in-out;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: black;
+      top: 0;
+    }
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &.primary {
+      &:focus {
+        border-color: var(--primary-color, $primary-color);
+      }
+      &:focus + label {
+        color: var(--primary-color, $primary-color);
+      }
+    }
+
+    &.secondary {
+      &:focus {
+        border-color: var(--secondary-color, $secondary-color);
+        &:focus + label {
+          color: var(--secondary-color, $secondary-color);
+        }
+      }
+    }
+
+    &.success {
+      &:focus {
+        border-color: var(--success-color, $success-color);
+      }
+      &:focus + label {
+        color: var(--success-color, $success-color);
+      }
+    }
+
+    &.warning {
+      &:focus {
+        border-color: var(--warning-color, $warning-color);
+      }
+      &:focus + label {
+        color: var(--warning-color, $warning-color);
+      }
+    }
+
+    &.danger {
+      &:focus {
+        border-color: var(--danger-color, $danger-color);
+      }
+      &:focus + label {
+        color: var(--danger-color, $danger-color);
+      }
+    }
+  }
+}

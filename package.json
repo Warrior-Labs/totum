@@ -1,0 +1,123 @@
+{
+  "name": "totum",
+  "version": "1.0.0",
+  "description": "Totum Design System by Warrior Labs",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./ActionMenu": {
+      "import": "./dist/esm/ActionMenu.js",
+      "require": "./dist/cjs/ActionMenu.js",
+      "types": "./dist/esm/ActionMenu.d.ts"
+    },
+    "./Alert": {
+      "import": "./dist/esm/Alert.js",
+      "require": "./dist/cjs/Alert.js",
+      "types": "./dist/esm/Alert.d.ts"
+    },
+    "./AppBar": {
+      "import": "./dist/esm/AppBar.js",
+      "require": "./dist/cjs/AppBar.js",
+      "types": "./dist/esm/AppBar.d.ts"
+    },
+    "./AppContainer": {
+      "import": "./dist/esm/AppContainer.js",
+      "require": "./dist/cjs/AppContainer.js",
+      "types": "./dist/esm/AppContainer.d.ts"
+    },
+    "./Button": {
+      "import": "./dist/esm/Button.js",
+      "require": "./dist/cjs/Button.js",
+      "types": "./dist/esm/Button.d.ts"
+    },
+    "./Grid": {
+      "import": "./dist/esm/Grid.js",
+      "require": "./dist/cjs/Grid.js",
+      "types": "./dist/esm/Grid.d.ts"
+    },
+    "./Pill": {
+      "import": "./dist/esm/Pill.js",
+      "require": "./dist/cjs/Pill.js",
+      "types": "./dist/esm/Pill.d.ts"
+    },
+    "./TextInput": {
+      "import": "./dist/esm/TextInput.js",
+      "require": "./dist/cjs/TextInput.js",
+      "types": "./dist/esm/TextInput.d.ts"
+    },
+    "./ToggleSwitch": {
+      "import": "./dist/esm/ToggleSwitch.js",
+      "require": "./dist/cjs/ToggleSwitch.js",
+      "types": "./dist/esm/ToggleSwitch.d.ts"
+    },
+    "./VerticalStack": {
+      "import": "./dist/esm/VerticalStack.js",
+      "require": "./dist/cjs/VerticalStack.js",
+      "types": "./dist/esm/VerticalStack.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "ActionMenu": [
+        "dist/esm/ActionMenu.d.ts"
+      ],
+      "Alert": [
+        "dist/esm/Alert.d.ts"
+      ],
+      "AppBar": [
+        "dist/esm/AppBar.d.ts"
+      ],
+      "AppContainer": [
+        "dist/esm/AppContainer.d.ts"
+      ],
+      "Button": [
+        "dist/esm/Button.d.ts"
+      ],
+      "Grid": [
+        "dist/esm/Grid.d.ts"
+      ],
+      "Pill": [
+        "dist/esm/Pill.d.ts"
+      ],
+      "TextInput": [
+        "dist/esm/TextInput.d.ts"
+      ],
+      "ToggleSwitch": [
+        "dist/esm/ToggleSwitch.d.ts"
+      ],
+      "VerticalStack": [
+        "dist/esm/VerticalStack.d.ts"
+      ]
+    }
+  },
+  "author": "Warrior Labs",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs && yarn build:css",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:css": "sass ./src/scss:./dist/esm/scss --style compressed && sass ./src/scss:./dist/cjs/scss --style compressed"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.53.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}
