@@ -31,10 +31,20 @@
       "require": "./dist/cjs/AppContainer.js",
       "types": "./dist/esm/AppContainer.d.ts"
     },
+    "./AppDrawer": {
+      "import": "./dist/esm/AppDrawer.js",
+      "require": "./dist/cjs/AppDrawer.js",
+      "types": "./dist/esm/AppDrawer.d.ts"
+    },
     "./Button": {
       "import": "./dist/esm/Button.js",
       "require": "./dist/cjs/Button.js",
       "types": "./dist/esm/Button.d.ts"
+    },
+    "./Container": {
+      "import": "./dist/esm/Container.js",
+      "require": "./dist/cjs/Container.js",
+      "types": "./dist/esm/Container.d.ts"
     },
     "./Grid": {
       "import": "./dist/esm/Grid.js",
@@ -76,8 +86,14 @@
       "AppContainer": [
         "dist/esm/AppContainer.d.ts"
       ],
+      "AppDrawer": [
+        "dist/esm/AppDrawer.d.ts"
+      ],
       "Button": [
         "dist/esm/Button.d.ts"
+      ],
+      "Container": [
+        "dist/esm/Container.d.ts"
       ],
       "Grid": [
         "dist/esm/Grid.d.ts"

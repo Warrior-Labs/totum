@@ -6,6 +6,7 @@ import variant from './types/Variants';
 
 type AppBarProps = {
   variant?: variant;
+  position?: 'fixed';
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -18,14 +19,21 @@ export const AppBar: React.FC<AppBarProps> = (props: AppBarProps) => {
   if (props.variant) {
     classes.push(styles[props.variant]);
   }
+  if (props.position) {
+    switch (props.position) {
+      case 'fixed':
+        classes.push(styles['fixed']);
+        break;
+    }
+  }
   if (props.className) {
     classes.push(props.className);
   }
 
   // Render
   return (
-    <div id={props.id} className={combineCSS(classes)} style={props.style}>
+    <header id={props.id} className={combineCSS(classes)} style={props.style}>
       {props.children}
-    </div>
+    </header>
   );
 };

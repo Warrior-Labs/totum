@@ -1,0 +1,57 @@
+@import 'variables';
+
+.AppDrawer {
+  background-color: var(--default-color, $default-color);
+  color: var(--default-color-overlay, $default-color-overlay);
+  width: var(--app-drawer-width, $app-drawer-width);
+  flex: 0 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.1s ease-in-out;
+
+  &.hidden {
+    transition: 0.1s ease-in-out;
+    width: 0;
+  }
+
+  &.icons {
+    transition: 0.1s ease-in-out;
+    width: 3rem;
+  }
+}
+
+.HamburgerButtonContainer {
+  width: var(--app-drawer-width, $app-drawer-width);
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: right;
+  transition: 0.1s ease-in-out;
+
+  &.icons,
+  &.hidden {
+    transition: 0.1s ease-in-out;
+    justify-content: center;
+    width: 3rem;
+  }
+
+  .HamburgerButton {
+    background: transparent;
+    border-radius: var(--border-radius, $border-radius);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+
+    > svg {
+      fill: white;
+    }
+
+    &:hover {
+      background: var(--overlay-10, $overlay-10);
+    }
+  }
+}
