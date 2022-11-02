@@ -6,6 +6,7 @@
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  gap: var(--padding, $padding);
   align-items: center;
   min-height: 3rem;
   background-color: var(--default-color, $default-color);

@@ -8,7 +8,7 @@ type GridProps = {} & StyleProps & React.PropsWithChildren;
 /**
  * Grid Container
  */
-export const Grid: React.FC<GridProps> = (props: GridProps) => {
+const GridContainer: React.FC<GridProps> = (props: GridProps) => {
   return (
     <div
       id={props.id}
@@ -30,7 +30,7 @@ type GridItemProps = {
 /**
  * Grid Item for use within Grid element.
  */
-export const GridItem: React.FC<GridItemProps> = (props: GridItemProps) => {
+const GridItem: React.FC<GridItemProps> = (props: GridItemProps) => {
   let classes: (string | undefined)[] = [
     styles.GridItem,
     styles['Colspan' + props.colSpan.toString()],
@@ -53,3 +53,7 @@ export const GridItem: React.FC<GridItemProps> = (props: GridItemProps) => {
     </div>
   );
 };
+
+export const Grid = Object.assign(GridContainer, {
+  Item: GridItem,
+});

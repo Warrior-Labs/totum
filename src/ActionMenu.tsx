@@ -13,9 +13,7 @@ type ActionMenuProps = {} & StyleProps & React.PropsWithChildren;
 /**
  * ActionMenu is the base component for an Action Menu.
  */
-export const ActionMenu: React.FC<ActionMenuProps> = (
-  props: ActionMenuProps
-) => {
+const Menu: React.FC<ActionMenuProps> = (props: ActionMenuProps) => {
   // Close the Menu when clicking outside of it
   const menuRef = useRef<HTMLSpanElement>(null);
   const hideMenuHandler = () => {
@@ -53,7 +51,7 @@ type ActionMenuButtonProps = {
 /**
  * ActionMenuButton element
  */
-export const ActionMenuButton: React.FC<ActionMenuButtonProps> = (
+const MenuButton: React.FC<ActionMenuButtonProps> = (
   props: ActionMenuButtonProps
 ) => {
   // Toggle Menu Method
@@ -93,7 +91,7 @@ type ActionMenuListProps = {} & StyleProps & React.PropsWithChildren;
 /**
  * Action Menu List - contains items for the action menu.
  */
-export const ActionMenuList: React.FC<ActionMenuListProps> = (
+const MenuList: React.FC<ActionMenuListProps> = (
   props: ActionMenuListProps
 ) => {
   // Render
@@ -122,7 +120,7 @@ type ActionMenuItemProps = {
 /**
  * Action Menu Item - single element in the action menu.
  */
-export const ActionMenuItem: React.FC<ActionMenuItemProps> = (
+const MenuItem: React.FC<ActionMenuItemProps> = (
   props: ActionMenuItemProps
 ) => {
   // Render
@@ -149,7 +147,7 @@ export const ActionMenuItem: React.FC<ActionMenuItemProps> = (
   );
 };
 
-export const ActionMenuItemSeparator: React.FC = () => {
+const MenuItemSeparator: React.FC = () => {
   // Render
   return (
     <li className={combineCSS([styles.ActionMenuItem, styles.separator])}>
@@ -157,3 +155,10 @@ export const ActionMenuItemSeparator: React.FC = () => {
     </li>
   );
 };
+
+export const ActionMenu = Object.assign(Menu, {
+  Button: MenuButton,
+  List: MenuList,
+  Item: MenuItem,
+  Separator: MenuItemSeparator,
+});
