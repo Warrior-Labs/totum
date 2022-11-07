@@ -36,6 +36,11 @@
       "require": "./dist/cjs/AppDrawer.js",
       "types": "./dist/esm/AppDrawer.d.ts"
     },
+    "./Breadcrumb": {
+      "import": "./dist/esm/Breadcrumb.js",
+      "require": "./dist/cjs/Breadcrumb.js",
+      "types": "./dist/esm/Breadcrumb.d.ts"
+    },
     "./Button": {
       "import": "./dist/esm/Button.js",
       "require": "./dist/cjs/Button.js",
@@ -50,6 +55,11 @@
       "import": "./dist/esm/Grid.js",
       "require": "./dist/cjs/Grid.js",
       "types": "./dist/esm/Grid.d.ts"
+    },
+    "./MessageTray": {
+      "import": "./dist/esm/MessageTray.js",
+      "require": "./dist/cjs/MessageTray.js",
+      "types": "./dist/esm/MessageTray.d.ts"
     },
     "./Pill": {
       "import": "./dist/esm/Pill.js",
@@ -89,6 +99,9 @@
       "AppDrawer": [
         "dist/esm/AppDrawer.d.ts"
       ],
+      "Breadcrumb": [
+        "dist/esm/Breadcrumb.d.ts"
+      ],
       "Button": [
         "dist/esm/Button.d.ts"
       ],
@@ -97,6 +110,9 @@
       ],
       "Grid": [
         "dist/esm/Grid.d.ts"
+      ],
+      "MessageTray": [
+        "dist/esm/MessageTray.d.ts"
       ],
       "Pill": [
         "dist/esm/Pill.d.ts"

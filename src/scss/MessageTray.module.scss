@@ -1,0 +1,90 @@
+@import 'variables';
+
+/**
+ * Message Tray Styles
+ */
+.MessageTrayContainer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid var(--overlay-10, $overlay-10);
+  border-radius: var(--border-radius, $border-radius);
+  height: 100%;
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  > .MessageTray {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    //background: rgba(0, 0, 0, 0.05);
+    border-right: 1px solid var(--overlay-10, $overlay-10);
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: min-content auto min-content;
+
+    &.sm {
+      width: 240px;
+    }
+
+    &.md {
+      width: 360px;
+    }
+
+    &.lg {
+      width: 480px;
+    }
+
+    > .MessageTrayHeader,
+    > .MessageTrayFooter {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      min-height: 2rem;
+      height: min-content;
+    }
+
+    > .MessageTrayHeader {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      grid-row: 1;
+    }
+
+    > .MessageTrayFooter {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      grid-row: 3;
+    }
+
+    > .MessageList {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: auto;
+      height: auto;
+      align-self: stretch;
+
+      .MessageItem {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: $padding;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        &:last-of-type {
+          border-bottom: 1px solid transparent;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid transparent;
+        }
+
+        &.selected {
+          background: rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid transparent;
+        }
+      }
+    }
+  }
+}
