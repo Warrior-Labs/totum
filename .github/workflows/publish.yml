@@ -20,7 +20,6 @@ jobs:
           scope: '@Warrior-Labs'
       - run: yarn install
       - run: yarn build
-      - run: npm ci
-      - run: npm publish
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
