@@ -1,0 +1,113 @@
+@import 'root';
+
+/**
+ * Toggle Switch
+ */
+.FormControl {
+  $toggle-size: 1rem;
+  > label {
+    display: grid;
+    grid-template-columns: min-content auto;
+    cursor: pointer;
+
+    > .ToggleSwitch {
+      position: relative;
+      display: inline-block;
+      width: $toggle-size * 2.4;
+      height: calc($toggle-size + 4px);
+      align-self: center;
+
+      > input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      > .Slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: $toggle-size;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      > .Slider:before {
+        position: absolute;
+        content: '';
+        height: $toggle-size;
+        width: $toggle-size;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      > input:checked + .Slider {
+        background-color: #222;
+      }
+
+      > input:focus + .Slider {
+        box-shadow: 0 0 1px #222;
+      }
+
+      > .primary:checked + .Slider {
+        background-color: var(--primary-color, $primary-color);
+      }
+
+      > .primary:focus + .Slider {
+        box-shadow: 0 0 1px var(--primary-color, $primary-color);
+      }
+
+      > .secondary:checked + .Slider {
+        background-color: var(--secondary-color, $secondary-color);
+      }
+
+      > .secondary:focus + .Slider {
+        box-shadow: 0 0 1px var(--secondary-color, $secondary-color);
+      }
+
+      > .success:checked + .Slider {
+        background-color: var(--success-color, $success-color);
+      }
+
+      > .success:focus + .Slider {
+        box-shadow: 0 0 1px var(--success-color, $success-color);
+      }
+
+      > .warning:checked + .Slider {
+        background-color: var(--warning-color, $warning-color);
+      }
+
+      > .warning:focus + .Slider {
+        box-shadow: 0 0 1px var(--warning-color, $warning-color);
+      }
+
+      > .danger:checked + .Slider {
+        background-color: var(--danger-color, $danger-color);
+      }
+
+      > .danger:focus + .Slider {
+        box-shadow: 0 0 1px var(--danger-color, $danger-color);
+      }
+
+      input:checked + .Slider:before {
+        -webkit-transform: translateX($toggle-size);
+        -ms-transform: translateX($toggle-size);
+        transform: translateX($toggle-size);
+      }
+    }
+
+    > .Label {
+      display: block;
+      padding-left: $padding;
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'root';
+
+.Breadcrumb {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 var(--padding-sm, $padding-sm);
+
+  > .BreadcrumbItem {
+    padding: var(--padding, $padding) 0;
+    margin: 0;
+    display: inline-block;
+
+    &::after {
+      padding: var(--padding, $padding) var(--padding-sm, $padding-sm);
+      color: $overlay-50;
+      content: '»';
+    }
+
+    &:last-child {
+      &::after {
+        content: '';
+      }
+    }
+
+    > a {
+      color: var(--primary-color, $primary-color);
+
+      &.default {
+        color: var(--default-color, $default-color);
+      }
+
+      &.primary {
+        color: var(--primary-color, $primary-color);
+      }
+
+      &.secondary {
+        color: var(--secondary-color, $secondary-color);
+      }
+
+      &.success {
+        color: var(--success-color, $success-color);
+      }
+
+      &.warning {
+        color: var(--warning-color, $warning-color);
+      }
+
+      &.danger {
+        color: var(--danger-color, $danger-color);
+      }
+    }
+  }
+}

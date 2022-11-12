@@ -1,0 +1,13 @@
+/**
+ * Vertical Stack Properties
+ */
+.VerticalStack {
+  display: grid;
+  grid-template-columns: 100%;
+
+  > .StackItem {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

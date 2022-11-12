@@ -1,0 +1,187 @@
+{
+  "name": "totum",
+  "version": "1.0.0",
+  "description": "Totum Design System by Warrior Labs",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./useOnClickOutside": {
+      "import": "./dist/esm/hooks/useOnClickOutside.js",
+      "require": "./dist/cjs/hooks/useOnClickOutside.js",
+      "types": "./dist/esm/hooks/useOnClickOutside.d.ts"
+    },
+    "./ActionMenu": {
+      "import": "./dist/esm/ActionMenu.js",
+      "require": "./dist/cjs/ActionMenu.js",
+      "types": "./dist/esm/ActionMenu.d.ts"
+    },
+    "./Alert": {
+      "import": "./dist/esm/Alert.js",
+      "require": "./dist/cjs/Alert.js",
+      "types": "./dist/esm/Alert.d.ts"
+    },
+    "./AppBar": {
+      "import": "./dist/esm/AppBar.js",
+      "require": "./dist/cjs/AppBar.js",
+      "types": "./dist/esm/AppBar.d.ts"
+    },
+    "./AppContainer": {
+      "import": "./dist/esm/AppContainer.js",
+      "require": "./dist/cjs/AppContainer.js",
+      "types": "./dist/esm/AppContainer.d.ts"
+    },
+    "./AppDrawer": {
+      "import": "./dist/esm/AppDrawer.js",
+      "require": "./dist/cjs/AppDrawer.js",
+      "types": "./dist/esm/AppDrawer.d.ts"
+    },
+    "./Breadcrumb": {
+      "import": "./dist/esm/Breadcrumb.js",
+      "require": "./dist/cjs/Breadcrumb.js",
+      "types": "./dist/esm/Breadcrumb.d.ts"
+    },
+    "./Button": {
+      "import": "./dist/esm/Button.js",
+      "require": "./dist/cjs/Button.js",
+      "types": "./dist/esm/Button.d.ts"
+    },
+    "./Container": {
+      "import": "./dist/esm/Container.js",
+      "require": "./dist/cjs/Container.js",
+      "types": "./dist/esm/Container.d.ts"
+    },
+    "./Grid": {
+      "import": "./dist/esm/Grid.js",
+      "require": "./dist/cjs/Grid.js",
+      "types": "./dist/esm/Grid.d.ts"
+    },
+    "./MessageTray": {
+      "import": "./dist/esm/MessageTray.js",
+      "require": "./dist/cjs/MessageTray.js",
+      "types": "./dist/esm/MessageTray.d.ts"
+    },
+    "./NavigationList": {
+      "import": "./dist/esm/NavigationList.js",
+      "require": "./dist/cjs/NavigationList.js",
+      "types": "./dist/esm/NavigationList.d.ts"
+    },
+    "./Pill": {
+      "import": "./dist/esm/Pill.js",
+      "require": "./dist/cjs/Pill.js",
+      "types": "./dist/esm/Pill.d.ts"
+    },
+    "./RadioGroup": {
+      "import": "./dist/esm/RadioGroup.js",
+      "require": "./dist/cjs/RadioGroup.js",
+      "types": "./dist/esm/RadioGroup.d.ts"
+    },
+    "./TabNav": {
+      "import": "./dist/esm/TabNav.js",
+      "require": "./dist/cjs/TabNav.js",
+      "types": "./dist/esm/TabNav.d.ts"
+    },
+    "./TextInput": {
+      "import": "./dist/esm/TextInput.js",
+      "require": "./dist/cjs/TextInput.js",
+      "types": "./dist/esm/TextInput.d.ts"
+    },
+    "./ToggleSwitch": {
+      "import": "./dist/esm/ToggleSwitch.js",
+      "require": "./dist/cjs/ToggleSwitch.js",
+      "types": "./dist/esm/ToggleSwitch.d.ts"
+    },
+    "./VerticalStack": {
+      "import": "./dist/esm/VerticalStack.js",
+      "require": "./dist/cjs/VerticalStack.js",
+      "types": "./dist/esm/VerticalStack.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "useOnClickOutside": [
+        "dist/esm/hooks/useOnClickOutside"
+      ],
+      "ActionMenu": [
+        "dist/esm/ActionMenu.d.ts"
+      ],
+      "Alert": [
+        "dist/esm/Alert.d.ts"
+      ],
+      "AppBar": [
+        "dist/esm/AppBar.d.ts"
+      ],
+      "AppContainer": [
+        "dist/esm/AppContainer.d.ts"
+      ],
+      "AppDrawer": [
+        "dist/esm/AppDrawer.d.ts"
+      ],
+      "Breadcrumb": [
+        "dist/esm/Breadcrumb.d.ts"
+      ],
+      "Button": [
+        "dist/esm/Button.d.ts"
+      ],
+      "Container": [
+        "dist/esm/Container.d.ts"
+      ],
+      "Grid": [
+        "dist/esm/Grid.d.ts"
+      ],
+      "MessageTray": [
+        "dist/esm/MessageTray.d.ts"
+      ],
+      "NavigationList": [
+        "dist/esm/NavigationList.d.ts"
+      ],
+      "Pill": [
+        "dist/esm/Pill.d.ts"
+      ],
+      "RadioGroup": [
+        "dist/esm/RadioGroup.d.ts"
+      ],
+      "TabNav": [
+        "dist/esm/TabNav.d.ts"
+      ],
+      "TextInput": [
+        "dist/esm/TextInput.d.ts"
+      ],
+      "ToggleSwitch": [
+        "dist/esm/ToggleSwitch.d.ts"
+      ],
+      "VerticalStack": [
+        "dist/esm/VerticalStack.d.ts"
+      ]
+    }
+  },
+  "author": "Warrior Labs",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs && yarn build:css",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:css": "sass ./src/scss:./dist/esm/scss --style compressed && sass ./src/scss:./dist/cjs/scss --style compressed"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.53.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}

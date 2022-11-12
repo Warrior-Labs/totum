@@ -1,0 +1,64 @@
+/**
+ * Grid Styles
+ */
+.Grid {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12)
+    calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(
+      100% / 12
+    )
+    calc(100% / 12) calc(100% / 12) calc(100% / 12);
+
+  > .GridItem {
+    &.Colspan2 {
+      grid-column: span 2;
+    }
+    &.Colspan3 {
+      grid-column: span 3;
+    }
+    &.Colspan4 {
+      grid-column: span 4;
+    }
+    &.Colspan5 {
+      grid-column: span 5;
+    }
+    &.Colspan6 {
+      grid-column: span 6;
+    }
+    &.Colspan7 {
+      grid-column: span 7;
+    }
+    &.Colspan8 {
+      grid-column: span 8;
+    }
+    &.Colspan9 {
+      grid-column: span 9;
+    }
+    &.Colspan10 {
+      grid-column: span 10;
+    }
+    &.Colspan11 {
+      grid-column: span 11;
+    }
+    &.Colspan12 {
+      grid-column: span 12;
+    }
+    &.VAlignTop {
+      align-self: start;
+    }
+    &.VAlignMiddle {
+      align-self: center;
+    }
+    &.VAlignBottom {
+      align-self: end;
+    }
+    &.VAlignFill {
+      align-self: stretch;
+    }
+  }
+}

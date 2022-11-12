@@ -1,0 +1,150 @@
+@import 'root';
+
+.TabContainer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-rows: min-content auto;
+
+  .TabList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 var(--padding, $padding);
+    display: flex;
+    align-items: flex-end;
+    column-gap: var(--margin-sm, $margin-sm);
+
+    > li {
+      display: inline;
+
+      > a {
+        display: inline-block;
+        padding: var(--padding-lg, $padding-lg) var(--padding-lg, $padding-lg);
+        margin: 1px 1px 0 1px;
+        color: var(--default-color-overlay, $default-color-overlay);
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.selected {
+          background: var(--default-color, $default-color);
+          border-top-left-radius: var(--border-radius, $border-radius);
+          border-top-right-radius: var(--border-radius, $border-radius);
+          border-top-width: 1px;
+          border-top-style: solid;
+          border-left-width: 1px;
+          border-left-style: solid;
+          border-right-width: 1px;
+          border-right-style: solid;
+          border-color: var(--default-color, $default-color);
+          margin: 0;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .TabContent {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: var(--padding, $padding);
+    border-radius: var(--border-radius-sm, $border-radius-sm);
+    border: 1px solid var(--default-color, $default-color);
+
+    > [role='tab'] {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
+  }
+
+  &.primary {
+    .TabList {
+      > li > a {
+        color: var(--primary-color, $primary-color);
+        &.selected {
+          background: var(--primary-color, $primary-color);
+          color: var(--primary-color-overlay, $primary-color-overlay);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--primary-color, $primary-color);
+    }
+  }
+
+  &.secondary {
+    .TabList {
+      > li > a {
+        color: var(--secondary-color, $secondary-color);
+        &.selected {
+          background: var(--secondary-color, $secondary-color);
+          color: var(--secondary-color-overlay, $secondary-color-overlay);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--secondary-color, $secondary-color);
+    }
+  }
+
+  &.success {
+    .TabList {
+      > li > a {
+        color: var(--success-color, $success-color);
+        &.selected {
+          background: var(--success-color, $success-color);
+          color: var(--success-color-overlay, $success-color-overlay);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--success-color, $success-color);
+    }
+  }
+
+  &.warning {
+    .TabList {
+      > li > a {
+        color: var(--warning-color, $warning-color);
+        &.selected {
+          background: var(--warning-color, $warning-color);
+          color: var(--warning-color-overlay, $warning-color-overlay);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--warning-color, $warning-color);
+    }
+  }
+
+  &.danger {
+    .TabList {
+      > li > a {
+        color: var(--danger-color, $danger-color);
+        &.selected {
+          background: var(--danger-color, $danger-color);
+          color: var(--danger-color-overlay, $danger-color-overlay);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--danger-color, $danger-color);
+    }
+  }
+}
