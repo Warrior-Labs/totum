@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { isValidElement } from 'react';
 import combineCSS from './helpers/combineCSS';
 import styles from './scss/NavigationList.module.css';
 import StyleProps from './types/StyleProps';
@@ -29,18 +30,44 @@ const NavigationListContainer: React.FC<NavigationListProps> = (
 
 type NavigationListItemProps = {
   href?: string;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 } & StyleProps &
   React.PropsWithChildren;
 
 const NavigationListItem: React.FC<NavigationListItemProps> = (
   props: NavigationListItemProps
 ) => {
+  // Get NavigationSubList from children
+  const subList = React.Children.toArray(props.children).find(
+    (child) => isValidElement(child) && child.type === NavigationSubList
+  );
+
+  // Get children without NavigationSubList
+  const childrenWithoutSubNav = React.Children.toArray(props.children).filter(
+    (child) => (isValidElement(child) ? child.type !== NavigationSubList : true)
+  );
+
+  // Render ItemWithSubNav if SubNav is present
+  if (subList && isValidElement(subList)) {
+    return (
+      <li
+        id={props.id}
+        className={combineCSS([props.className])}
+        style={props.style}
+      >
+        <button className={styles.NavigationItem} onClick={props.onClick}>
+          {childrenWithoutSubNav}
+        </button>
+        {subList}
+      </li>
+    );
+  }
+
   // Render
   return (
     <li
       id={props.id}
-      className={combineCSS([styles.NavigationListItem, props.className])}
+      className={combineCSS([props.className])}
       style={props.style}
     >
       {props.href && (
@@ -53,12 +80,38 @@ const NavigationListItem: React.FC<NavigationListItemProps> = (
         </a>
       )}
       {!props.href && (
-        <span className={styles.NavigationItem}>{props.children}</span>
+        <button className={styles.NavigationItem} onClick={props.onClick}>
+          {props.children}
+        </button>
       )}
     </li>
   );
 };
 
+type NavigationSubListProps = {
+  hidden?: boolean;
+} & StyleProps &
+  React.PropsWithChildren;
+
+const NavigationSubList: React.FC<NavigationSubListProps> = (
+  props: NavigationSubListProps
+) => {
+  // Set the Base Classes
+  let classes: (string | undefined)[] = [styles.NavigationSubList];
+  if (props.hidden) {
+    classes.push(styles.hidden);
+  }
+  classes.push(props.className);
+
+  // Render
+  return (
+    <ul id={props.id} className={combineCSS(classes)} style={props.style}>
+      {props.children}
+    </ul>
+  );
+};
+
 export const NavigationList = Object.assign(NavigationListContainer, {
   Item: NavigationListItem,
+  Sub: NavigationSubList,
 });
