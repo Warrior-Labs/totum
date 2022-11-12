@@ -21,7 +21,9 @@ jobs:
           scope: '@Warrior-Labs'
       - run: yarn install
       - run: yarn build
-      - run: echo "registry=https://registry.yarnpkg.com/\n@Warrior-Labs:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      - run: echo "registry=https://registry.yarnpkg.com/" > ~/.npmrc
+      - run: echo "@Warrior-Labs:registry=https://npm.pkg.github.com" >> ~/.npmrc
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
       - run: yarn publish
         env:
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
