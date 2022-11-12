@@ -18,11 +18,8 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@Warrior-Labs'
-      - name: Install Dependencies
       - run: yarn install
-      - name: Build Package
       - run: yarn build
-      - name: Publish Package
       - run: npm ci
       - run: npm publish
         env:
