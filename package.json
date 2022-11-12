@@ -1,15 +1,15 @@
 {
-  "name": "totum",
+  "name": "@Warrior-Labs/totum",
   "version": "0.0.1",
   "description": "Totum Design System by Warrior Labs",
   "author": "Warrior Labs",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Warrior-Labs/totum.git"
+    "url": "git+https://github.com/Warrior-Labs/totum.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Warrior-Labs"
+    "@Warrior-Labs:registry": "https://npm.pkg.github.com"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
