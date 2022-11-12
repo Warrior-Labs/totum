@@ -1,0 +1,9 @@
+# Ignore Source Directory
+src/
+
+# Ignore Configuration Directories
+.vscode/
+.github/
+
+# Ignore Desktop Files
+.DS_Store
