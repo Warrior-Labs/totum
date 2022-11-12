@@ -1,7 +1,7 @@
 import * as React from 'react';
 import combineCSS from './helpers/combineCSS';
 import styles from './scss/Grid.module.css';
-import StyleProps from './types/styleProps';
+import StyleProps from './types/StyleProps';
 
 type GridProps = {} & StyleProps & React.PropsWithChildren;
 

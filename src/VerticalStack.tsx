@@ -1,7 +1,7 @@
 import * as React from 'react';
 import combineCSS from './helpers/combineCSS';
 import styles from './scss/VerticalStack.module.css';
-import StyleProps from './types/styleProps';
+import StyleProps from './types/StyleProps';
 
 type VerticalStackProps = {
   spacing?: string;
