@@ -11,6 +11,7 @@ export type AppDrawerState = 'open' | 'icons' | 'hidden';
 type AppDrawerProps = {
   variant?: variant;
   display?: AppDrawerState;
+  overlay?: boolean;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -19,6 +20,9 @@ export const AppDrawer: React.FC<AppDrawerProps> = (props: AppDrawerProps) => {
   let classes: (string | undefined)[] = [styles.AppDrawer];
   if (props.variant) {
     classes.push(styles[props.variant]);
+  }
+  if (props.overlay) {
+    classes.push(styles.overlay);
   }
   if (props.display) {
     switch (props.display) {

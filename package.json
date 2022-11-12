@@ -11,6 +11,11 @@
       "require": "./dist/cjs/index.js",
       "types": "./dist/esm/index.d.ts"
     },
+    "./useOnClickOutside": {
+      "import": "./dist/esm/hooks/useOnClickOutside.js",
+      "require": "./dist/cjs/hooks/useOnClickOutside.js",
+      "types": "./dist/esm/hooks/useOnClickOutside.d.ts"
+    },
     "./ActionMenu": {
       "import": "./dist/esm/ActionMenu.js",
       "require": "./dist/cjs/ActionMenu.js",
@@ -61,10 +66,25 @@
       "require": "./dist/cjs/MessageTray.js",
       "types": "./dist/esm/MessageTray.d.ts"
     },
+    "./NavigationList": {
+      "import": "./dist/esm/NavigationList.js",
+      "require": "./dist/cjs/NavigationList.js",
+      "types": "./dist/esm/NavigationList.d.ts"
+    },
     "./Pill": {
       "import": "./dist/esm/Pill.js",
       "require": "./dist/cjs/Pill.js",
       "types": "./dist/esm/Pill.d.ts"
+    },
+    "./RadioGroup": {
+      "import": "./dist/esm/RadioGroup.js",
+      "require": "./dist/cjs/RadioGroup.js",
+      "types": "./dist/esm/RadioGroup.d.ts"
+    },
+    "./TabNav": {
+      "import": "./dist/esm/TabNav.js",
+      "require": "./dist/cjs/TabNav.js",
+      "types": "./dist/esm/TabNav.d.ts"
     },
     "./TextInput": {
       "import": "./dist/esm/TextInput.js",
@@ -84,6 +104,9 @@
   },
   "typesVersions": {
     "*": {
+      "useOnClickOutside": [
+        "dist/esm/hooks/useOnClickOutside"
+      ],
       "ActionMenu": [
         "dist/esm/ActionMenu.d.ts"
       ],
@@ -114,8 +137,17 @@
       "MessageTray": [
         "dist/esm/MessageTray.d.ts"
       ],
+      "NavigationList": [
+        "dist/esm/NavigationList.d.ts"
+      ],
       "Pill": [
         "dist/esm/Pill.d.ts"
+      ],
+      "RadioGroup": [
+        "dist/esm/RadioGroup.d.ts"
+      ],
+      "TabNav": [
+        "dist/esm/TabNav.d.ts"
       ],
       "TextInput": [
         "dist/esm/TextInput.d.ts"

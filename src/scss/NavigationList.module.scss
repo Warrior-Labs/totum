@@ -1,0 +1,87 @@
+@import 'root';
+
+.NavigationList {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      margin: 0;
+      padding: 0;
+
+      > .NavigationItem {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
+        border-radius: var(--border-radius, $border-radius);
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--default-color-overlay, $default-color-overlay);
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--default-color-dark, $default-color-dark);
+        }
+      }
+    }
+  }
+
+  &.primary {
+    .NavigationItem {
+      color: var(--primary-color-overlay, $primary-color-overlay);
+
+      &:hover {
+        background-color: var(--primary-color-dark, $primary-color-dark);
+      }
+    }
+  }
+
+  &.secondary {
+    .NavigationItem {
+      color: var(--secondary-color-overlay, $secondary-color-overlay);
+
+      &:hover {
+        background-color: var(--secondary-color-dark, $secondary-color-dark);
+      }
+    }
+  }
+
+  &.success {
+    .NavigationItem {
+      color: var(--success-color-overlay, $success-color-overlay);
+
+      &:hover {
+        background-color: var(--success-color-dark, $success-color-dark);
+      }
+    }
+  }
+
+  &.warning {
+    .NavigationItem {
+      color: var(--warning-color-overlay, $warning-color-overlay);
+
+      &:hover {
+        background-color: var(--warning-color-dark, $warning-color-dark);
+      }
+    }
+  }
+
+  &.danger {
+    .NavigationItem {
+      color: var(--danger-color-overlay, $danger-color-overlay);
+
+      &:hover {
+        background-color: var(--danger-color-dark, $danger-color-dark);
+      }
+    }
+  }
+}

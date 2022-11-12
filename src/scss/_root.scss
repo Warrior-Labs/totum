@@ -1,0 +1,6 @@
+@import 'variables';
+
+:root {
+  font-family: var(--body-font-family, $body-font-family);
+  font-size: var(--body-font-size, $body-font-size);
+}

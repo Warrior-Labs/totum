@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'root';
 
 .Pill {
   border-radius: var(--border-radius-lg, $border-radius-lg);
@@ -6,7 +6,7 @@
   margin: 0 0.2rem;
   background-color: var(--default-color, $default-color);
   color: var(--default-color-overlay, $default-color-overlay);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
 
   &.primary {

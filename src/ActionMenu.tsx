@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useRef } from 'react';
 import { Button } from './Button';
 import combineCSS from './helpers/combineCSS';
-import useOnClickOutside from './hooks/useOnClickOutside';
+import { useOnClickOutside } from './hooks/useOnClickOutside';
 import DropdownPointer from './icons/DropdownPointer';
 import styles from './scss/ActionMenu.module.css';
 import StyleProps from './types/StyleProps';

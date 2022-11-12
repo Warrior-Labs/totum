@@ -1,0 +1,43 @@
+@import 'root';
+
+.RadioGroup {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  .RadioGroupLegend {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: var(--margin, $margin);
+  }
+
+  .RadioGroupItem {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    column-gap: var(--margin-sm, $margin-sm);
+    padding: 0;
+    margin: 0 0 0 var(--margin-sm, $margin-sm);
+
+    > label,
+    input {
+      cursor: pointer;
+    }
+
+    label {
+      display: inline-block;
+      font-weight: 500;
+      color: var(--dark-gray, $dark-gray);
+      padding: var(--padding, $padding);
+    }
+
+    input {
+      margin: 0;
+    }
+  }
+}

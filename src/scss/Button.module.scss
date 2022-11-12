@@ -1,9 +1,9 @@
-@import 'variables';
+@import 'root';
 
 .Button {
   font-family: var(--body-font-family, $body-font-family);
   font-size: var(--body-font-size, $body-font-size);
-  font-weight: 600;
+  font-weight: 500;
   border-radius: var(--border-radius, $border-radius);
   border: 1px solid var(--overlay-5, $overlay-5);
   background: linear-gradient(
