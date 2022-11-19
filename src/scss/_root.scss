@@ -3,4 +3,5 @@
 :root {
   font-family: var(--body-font-family, $body-font-family);
   font-size: var(--body-font-size, $body-font-size);
+  color: var(--default-color-overlay, $default-color-overlay);
 }

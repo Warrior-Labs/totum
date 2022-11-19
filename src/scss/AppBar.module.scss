@@ -20,28 +20,68 @@
     z-index: 1201;
   }
 
+  svg {
+    fill: var(--default-color-overlay, $default-color-overlay);
+    stroke: var(--default-color-overlay, $default-color-overlay);
+  }
+
+  &.dark {
+    background-color: var(--default-color-overlay, $default-color-overlay);
+    color: var(--default-color, $default-color);
+
+    svg {
+      fill: var(--default-color, $default-color);
+      stroke: var(--default-color, $default-color);
+    }
+  }
+
   &.primary {
     background-color: var(--primary-color, $primary-color);
     color: var(--primary-color-overlay, $primary-color-overlay);
+
+    svg {
+      fill: var(--primary-color-overlay, $primary-color-overlay);
+      stroke: var(--primary-color-overlay, $primary-color-overlay);
+    }
   }
 
   &.secondary {
     background-color: var(--secondary-color, $secondary-color);
     color: var(--secondary-color-overlay, $secondary-color-overlay);
+
+    svg {
+      fill: var(--secondary-color-overlay, $secondary-color-overlay);
+      stroke: var(--secondary-color-overlay, $secondary-color-overlay);
+    }
   }
 
   &.success {
     background-color: var(--success-color, $success-color);
     color: var(--success-color-overlay, $success-color-overlay);
+
+    svg {
+      fill: var(--success-color-overlay, $success-color-overlay);
+      stroke: var(--success-color-overlay, $success-color-overlay);
+    }
   }
 
   &.warning {
     background-color: var(--warning-color, $warning-color);
     color: var(--warning-color-overlay, $warning-color-overlay);
+
+    svg {
+      fill: var(--warning-color-overlay, $warning-color-overlay);
+      stroke: var(--warning-color-overlay, $warning-color-overlay);
+    }
   }
 
   &.danger {
     background-color: var(--danger-color, $danger-color);
     color: var(--danger-color-overlay, $danger-color-overlay);
+
+    svg {
+      fill: var(--danger-color-overlay, $danger-color-overlay);
+      stroke: var(--danger-color-overlay, $danger-color-overlay);
+    }
   }
 }

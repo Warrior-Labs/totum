@@ -31,6 +31,11 @@
     width: 3rem;
   }
 
+  &.dark {
+    background-color: var(--default-color-overlay, $default-color-overlay);
+    color: var(--default-color, $default-color);
+  }
+
   &.primary {
     background-color: var(--primary-color, $primary-color);
     color: var(--primary-color-overlay, $primary-color-overlay);
@@ -86,10 +91,6 @@
     width: 2.4rem;
     height: 2.4rem;
     cursor: pointer;
-
-    > svg {
-      fill: white;
-    }
 
     &:hover {
       background: var(--overlay-10, $overlay-10);

@@ -20,6 +20,16 @@
     margin-right: var(--padding, $padding);
   }
 
+  &.dark {
+    background-color: var(--default-color-overlay, $default-color-overlay);
+    color: var(--default-color, $default-color);
+
+    svg {
+      fill: var(--default-color, $default-color);
+      stroke: var(--default-color, $default-color);
+    }
+  }
+
   &.primary {
     background: var(--primary-color-dark, $primary-color-dark);
     color: var(--primary-color-overlay, $primary-color-overlay);

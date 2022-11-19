@@ -147,6 +147,9 @@ const MenuItem: React.FC<ActionMenuItemProps> = (
   );
 };
 
+/**
+ * MenuItemSeparator creates a separator line between items.
+ */
 const MenuItemSeparator: React.FC = () => {
   // Render
   return (

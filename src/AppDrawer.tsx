@@ -12,6 +12,7 @@ type AppDrawerProps = {
   variant?: variant;
   display?: AppDrawerState;
   overlay?: boolean;
+  ref?: React.LegacyRef<HTMLDivElement>;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -40,7 +41,12 @@ export const AppDrawer: React.FC<AppDrawerProps> = (props: AppDrawerProps) => {
 
   // Render
   return (
-    <div id={props.id} className={combineCSS(classes)} style={props.style}>
+    <div
+      id={props.id}
+      className={combineCSS(classes)}
+      style={props.style}
+      ref={props.ref}
+    >
       {props.children}
     </div>
   );

@@ -13,6 +13,7 @@ $default-overlay: #111;
 
 $default-color: #efefef;
 $default-color-overlay: #444;
+$default-color-overlay-dark: darken($default-color-overlay, 5%);
 $default-color-highlight: #ffc745;
 $default-color-dark: darken($default-color, 5%);
 $default-color-light: lighten($default-color, 5%);

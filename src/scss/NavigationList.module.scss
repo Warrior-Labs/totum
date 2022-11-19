@@ -14,22 +14,41 @@
       margin: 0;
       padding: 0;
 
+      &.ItemHeading {
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: var(--padding, $padding) var(--padding-sm, $padding-sm);
+      }
+
       .NavigationItem {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        display: block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         background: none;
         padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
         border-radius: var(--border-radius, $border-radius);
         border: none;
-        font-size: 1.1rem;
+        border-left: var(--border-radius-lg, $border-radius-lg) solid
+          transparent;
+        font-size: 1rem;
         font-weight: 500;
         text-align: left;
         text-decoration: none;
         color: var(--default-color-overlay, $default-color-overlay);
         cursor: pointer;
+
+        svg {
+          width: min-content;
+          fill: var(--default-color-overlay, $default-color-overlay);
+          stroke: var(--default-color-overlay, $default-color-overlay);
+        }
+
+        &.selected {
+          border-left-color: $overlay-10;
+        }
 
         &:hover {
           background-color: var(--default-color-dark, $default-color-dark);
@@ -55,9 +74,40 @@
     }
   }
 
+  &.dark {
+    .ItemHeading {
+      color: var(--default-color, $default-color);
+    }
+
+    .NavigationItem {
+      color: var(--default-color, $default-color);
+
+      svg {
+        fill: var(--default-color, $default-color);
+        stroke: var(--default-color, $default-color);
+      }
+
+      &:hover {
+        background-color: var(
+          --default-color-overlay-dark,
+          $default-color-overlay-dark
+        );
+      }
+    }
+  }
+
   &.primary {
+    .ItemHeading {
+      color: var(--primary-color-overlay, $primary-color-overlay);
+    }
+
     .NavigationItem {
       color: var(--primary-color-overlay, $primary-color-overlay);
+
+      svg {
+        fill: var(--primary-color-overlay, $primary-color-overlay);
+        stroke: var(--primary-color-overlay, $primary-color-overlay);
+      }
 
       &:hover {
         background-color: var(--primary-color-dark, $primary-color-dark);
@@ -66,8 +116,17 @@
   }
 
   &.secondary {
+    .ItemHeading {
+      color: var(--secondary-color-overlay, $secondary-color-overlay);
+    }
+
     .NavigationItem {
       color: var(--secondary-color-overlay, $secondary-color-overlay);
+
+      svg {
+        fill: var(--secondary-color-overlay, $secondary-color-overlay);
+        stroke: var(--secondary-color-overlay, $secondary-color-overlay);
+      }
 
       &:hover {
         background-color: var(--secondary-color-dark, $secondary-color-dark);
@@ -76,8 +135,17 @@
   }
 
   &.success {
+    .ItemHeading {
+      color: var(--success-color-overlay, $success-color-overlay);
+    }
+
     .NavigationItem {
       color: var(--success-color-overlay, $success-color-overlay);
+
+      svg {
+        fill: var(--success-color-overlay, $success-color-overlay);
+        stroke: var(--success-color-overlay, $success-color-overlay);
+      }
 
       &:hover {
         background-color: var(--success-color-dark, $success-color-dark);
@@ -86,8 +154,17 @@
   }
 
   &.warning {
+    .ItemHeading {
+      color: var(--warning-color-overlay, $warning-color-overlay);
+    }
+
     .NavigationItem {
       color: var(--warning-color-overlay, $warning-color-overlay);
+
+      svg {
+        fill: var(--warning-color-overlay, $warning-color-overlay);
+        stroke: var(--warning-color-overlay, $warning-color-overlay);
+      }
 
       &:hover {
         background-color: var(--warning-color-dark, $warning-color-dark);
@@ -96,8 +173,17 @@
   }
 
   &.danger {
+    .ItemHeading {
+      color: var(--danger-color-overlay, $danger-color-overlay);
+    }
+
     .NavigationItem {
       color: var(--danger-color-overlay, $danger-color-overlay);
+
+      svg {
+        fill: var(--danger-color-overlay, $danger-color-overlay);
+        stroke: var(--danger-color-overlay, $danger-color-overlay);
+      }
 
       &:hover {
         background-color: var(--danger-color-dark, $danger-color-dark);

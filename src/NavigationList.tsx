@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { isValidElement } from 'react';
 import combineCSS from './helpers/combineCSS';
+import DownPointerIcon from './icons/DownPointer';
+import UpPointerIcon from './icons/UpPointer';
 import styles from './scss/NavigationList.module.css';
 import StyleProps from './types/StyleProps';
 import variant from './types/Variants';
@@ -31,12 +33,19 @@ const NavigationListContainer: React.FC<NavigationListProps> = (
 type NavigationListItemProps = {
   href?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  selected?: boolean;
 } & StyleProps &
   React.PropsWithChildren;
 
 const NavigationListItem: React.FC<NavigationListItemProps> = (
   props: NavigationListItemProps
 ) => {
+  // Set the Base Classes
+  let classes: (string | undefined)[] = [styles.NavigationItem];
+  if (props.selected) {
+    classes.push(styles.selected);
+  }
+
   // Get NavigationSubList from children
   const subList = React.Children.toArray(props.children).find(
     (child) => isValidElement(child) && child.type === NavigationSubList
@@ -49,14 +58,22 @@ const NavigationListItem: React.FC<NavigationListItemProps> = (
 
   // Render ItemWithSubNav if SubNav is present
   if (subList && isValidElement(subList)) {
+    // Determine whether to show the Pointer Icon
+    let pointerIcon: React.ReactNode;
+    if (subList.props.hidden !== undefined) {
+      if (subList.props.hidden) {
+        pointerIcon = <DownPointerIcon size='1rem' />;
+      } else {
+        pointerIcon = <UpPointerIcon size='1rem' />;
+      }
+    }
+
+    // Render
     return (
-      <li
-        id={props.id}
-        className={combineCSS([props.className])}
-        style={props.style}
-      >
-        <button className={styles.NavigationItem} onClick={props.onClick}>
-          {childrenWithoutSubNav}
+      <li id={props.id} className={props.className} style={props.style}>
+        <button className={combineCSS(classes)} onClick={props.onClick}>
+          <span>{childrenWithoutSubNav}</span>
+          {pointerIcon}
         </button>
         {subList}
       </li>
@@ -65,14 +82,10 @@ const NavigationListItem: React.FC<NavigationListItemProps> = (
 
   // Render
   return (
-    <li
-      id={props.id}
-      className={combineCSS([props.className])}
-      style={props.style}
-    >
+    <li id={props.id} className={props.className} style={props.style}>
       {props.href && (
         <a
-          className={styles.NavigationItem}
+          className={combineCSS(classes)}
           href={props.href}
           onClick={props.onClick}
         >
@@ -80,7 +93,7 @@ const NavigationListItem: React.FC<NavigationListItemProps> = (
         </a>
       )}
       {!props.href && (
-        <button className={styles.NavigationItem} onClick={props.onClick}>
+        <button className={combineCSS(classes)} onClick={props.onClick}>
           {props.children}
         </button>
       )}
@@ -111,7 +124,25 @@ const NavigationSubList: React.FC<NavigationSubListProps> = (
   );
 };
 
+type NavigationItemHeadingProps = {} & StyleProps & React.PropsWithChildren;
+
+const NavigationItemHeading: React.FC<NavigationItemHeadingProps> = (
+  props: NavigationItemHeadingProps
+) => {
+  // Render
+  return (
+    <li
+      id={props.id}
+      className={combineCSS([styles.ItemHeading, props.className])}
+      style={props.style}
+    >
+      {props.children}
+    </li>
+  );
+};
+
 export const NavigationList = Object.assign(NavigationListContainer, {
   Item: NavigationListItem,
+  Heading: NavigationItemHeading,
   Sub: NavigationSubList,
 });

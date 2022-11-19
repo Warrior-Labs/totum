@@ -9,6 +9,11 @@
   font-size: 0.9rem;
   font-weight: 500;
 
+  &.dark {
+    background-color: var(--default-color-overlay, $default-color-overlay);
+    color: var(--default-color, $default-color);
+  }
+
   &.primary {
     background-color: var(--primary-color, $primary-color);
     color: var(--primary-color-overlay, $primary-color-overlay);

@@ -25,7 +25,7 @@
     width: 100%;
     font-family: $body-font-family;
     font-size: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $overlay-10;
     resize: none;
     border-radius: var(--border-radius, $border-radius);
     padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
@@ -47,11 +47,20 @@
       transition: top 100ms ease-in-out;
       font-size: 0.9rem;
       font-weight: 500;
-      color: black;
+      color: var(--default-color-overlay, $default-color-overlay);
       top: 0;
     }
     &:focus {
-      border-color: rgba(0, 0, 0, 0.2);
+      border-color: $overlay-25;
+    }
+
+    &.dark {
+      &:focus {
+        border-color: var(--default-color, $default-color);
+      }
+      &:focus + label {
+        color: var(--default-color, $default-color);
+      }
     }
 
     &.primary {

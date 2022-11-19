@@ -1,3 +1,9 @@
-type variant = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+type variant =
+  | 'dark'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger';
 
 export default variant;

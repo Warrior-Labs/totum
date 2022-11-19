@@ -57,6 +57,14 @@
         box-shadow: 0 0 1px #222;
       }
 
+      > .dark:checked + .Slider {
+        background-color: var(--default-color-overlay, $default-color-overlay);
+      }
+
+      > .dark:focus + .Slider {
+        box-shadow: 0 0 1px var(--default-color-overlay, $default-color-overlay);
+      }
+
       > .primary:checked + .Slider {
         background-color: var(--primary-color, $primary-color);
       }

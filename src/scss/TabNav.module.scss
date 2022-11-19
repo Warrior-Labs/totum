@@ -68,6 +68,25 @@
     }
   }
 
+  &.dark {
+    .TabList {
+      > li > a {
+        color: var(--default-color-overlay, $default-color-overlay);
+        &.selected {
+          background-color: var(
+            --default-color-overlay,
+            $default-color-overlay
+          );
+          color: var(--default-color, $default-color);
+        }
+      }
+    }
+
+    .TabContent {
+      border-color: var(--default-color-overlay, $default-color-overlay);
+    }
+  }
+
   &.primary {
     .TabList {
       > li > a {

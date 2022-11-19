@@ -13,10 +13,6 @@ type AlertProps = {
   React.PropsWithChildren;
 
 export const Alert: React.FC<AlertProps> = (props: AlertProps) => {
-  // let baseCSS =
-  //   'full-width box-sizing padding-lg-t padding-lg-b padding-l padding-r border-rad-all alert ' +
-  //   props.variant;
-  // Set the Base Classes
   let classes: (string | undefined)[] = [styles.Alert];
   if (props.variant) {
     classes.push(styles[props.variant]);
