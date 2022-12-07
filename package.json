@@ -65,10 +65,20 @@
       "require": "./dist/cjs/Container.js",
       "types": "./dist/esm/Container.d.ts"
     },
+    "./DataTable": {
+      "import": "./dist/esm/DataTable.js",
+      "require": "./dist/cjs/DataTable.js",
+      "types": "./dist/esm/DataTable.d.ts"
+    },
     "./Grid": {
       "import": "./dist/esm/Grid.js",
       "require": "./dist/cjs/Grid.js",
       "types": "./dist/esm/Grid.d.ts"
+    },
+    "./Link": {
+      "import": "./dist/esm/Link.js",
+      "require": "./dist/cjs/Link.js",
+      "types": "./dist/esm/Link.d.ts"
     },
     "./MessageTray": {
       "import": "./dist/esm/MessageTray.js",
@@ -140,8 +150,14 @@
       "Container": [
         "dist/esm/Container.d.ts"
       ],
+      "DataTable": [
+        "dist/esm/DataTable.d.ts"
+      ],
       "Grid": [
         "dist/esm/Grid.d.ts"
+      ],
+      "Link": [
+        "dist/esm/Link.d.ts"
       ],
       "MessageTray": [
         "dist/esm/MessageTray.d.ts"

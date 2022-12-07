@@ -25,6 +25,15 @@
     stroke: var(--default-color-overlay, $default-color-overlay);
   }
 
+  a {
+    color: var(--default-color-overlay, $default-color-overlay);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &.dark {
     background-color: var(--default-color-overlay, $default-color-overlay);
     color: var(--default-color, $default-color);
@@ -32,6 +41,10 @@
     svg {
       fill: var(--default-color, $default-color);
       stroke: var(--default-color, $default-color);
+    }
+
+    a {
+      color: var(--default-color, $default-color);
     }
   }
 
@@ -43,6 +56,10 @@
       fill: var(--primary-color-overlay, $primary-color-overlay);
       stroke: var(--primary-color-overlay, $primary-color-overlay);
     }
+
+    a {
+      color: var(--primary-color-overlay, $primary-color-overlay);
+    }
   }
 
   &.secondary {
@@ -52,6 +69,10 @@
     svg {
       fill: var(--secondary-color-overlay, $secondary-color-overlay);
       stroke: var(--secondary-color-overlay, $secondary-color-overlay);
+    }
+
+    a {
+      color: var(--secondary-color-overlay, $secondary-color-overlay);
     }
   }
 
@@ -63,6 +84,10 @@
       fill: var(--success-color-overlay, $success-color-overlay);
       stroke: var(--success-color-overlay, $success-color-overlay);
     }
+
+    a {
+      color: var(--success-color-overlay, $success-color-overlay);
+    }
   }
 
   &.warning {
@@ -73,6 +98,10 @@
       fill: var(--warning-color-overlay, $warning-color-overlay);
       stroke: var(--warning-color-overlay, $warning-color-overlay);
     }
+
+    a {
+      color: var(--warning-color-overlay, $warning-color-overlay);
+    }
   }
 
   &.danger {
@@ -82,6 +111,10 @@
     svg {
       fill: var(--danger-color-overlay, $danger-color-overlay);
       stroke: var(--danger-color-overlay, $danger-color-overlay);
+    }
+
+    a {
+      color: var(--danger-color-overlay, $danger-color-overlay);
     }
   }
 }

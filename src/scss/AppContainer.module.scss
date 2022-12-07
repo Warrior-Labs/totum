@@ -10,6 +10,10 @@
   font-family: var(--body-font-family, $body-font-family);
   font-size: var(--body-font-size, $body-font-size);
 
+  a {
+    color: var(--primary-color, $primary-color);
+  }
+
   &.dark {
     background-color: var(--default-color-overlay, $default-color-overlay);
     color: var(--default-color, $default-color);
