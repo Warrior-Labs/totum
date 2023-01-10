@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import combineCSS from './helpers/combineCSS';
 import styles from './scss/MessageTray.module.css';
 import StyleProps from './types/StyleProps';
@@ -93,6 +94,7 @@ export const List: React.FC<MessageListProps> = (props: MessageListProps) => {
 
 type MessageItemProps = {
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+  selected?: boolean;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -122,11 +124,23 @@ export const Message: React.FC<MessageItemProps> = (
     props.onClick(e);
   };
 
+  const setBaseClasses = (selected?: boolean) => {
+    if (selected) {
+      return [styles.MessageItem, styles.selected, props.className];
+    } else {
+      return [styles.MessageItem, props.className];
+    }
+  };
+  let baseClasses = setBaseClasses(props.selected);
+  useEffect(() => {
+    baseClasses = setBaseClasses(props.selected);
+  }, [props.selected]);
+
   // Render
   return (
     <div
       id={props.id}
-      className={combineCSS([styles.MessageItem, props.className])}
+      className={combineCSS(baseClasses)}
       style={props.style}
       onClick={SelectMessage}
     >

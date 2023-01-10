@@ -33,6 +33,7 @@
         border: none;
         border-left: var(--border-radius-lg, $border-radius-lg) solid
           transparent;
+        font-family: var(--body-font-family, $body-font-family);
         font-size: 1rem;
         font-weight: 500;
         text-align: left;

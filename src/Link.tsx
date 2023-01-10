@@ -4,6 +4,7 @@ import StyleProps from './types/StyleProps';
 type LinkProps = {
   href: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  ariaLabel?: string;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -16,6 +17,8 @@ export const Link: React.FC<LinkProps> = (props: LinkProps) => {
       style={props.style}
       href={props.href}
       onClick={props.onClick}
+      title={props.ariaLabel}
+      aria-label={props.ariaLabel}
     >
       {props.children}
     </a>

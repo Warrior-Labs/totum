@@ -24,6 +24,7 @@ const BreadcrumbContainer: React.FC<BreadcrumbProps> = (
 type BreadcrumbItemProps = {
   href?: string;
   variant?: variant;
+  ariaLabel?: string;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -40,6 +41,8 @@ const BreadcrumbItem: React.FC<BreadcrumbItemProps> = (
       <a
         href={props.href}
         className={props.variant ? styles[props.variant.toString()] : ''}
+        title={props.ariaLabel}
+        aria-label={props.ariaLabel}
       >
         {props.children}
       </a>

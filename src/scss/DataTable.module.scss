@@ -33,6 +33,7 @@
       > .TableCell,
       > .TableHeadCell {
         font-size: 1.1rem;
+        padding: var(--padding-lg, $padding-lg) var(--padding, $padding);
       }
     }
   }

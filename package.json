@@ -115,6 +115,11 @@
       "require": "./dist/cjs/ToggleSwitch.js",
       "types": "./dist/esm/ToggleSwitch.d.ts"
     },
+    "./ToolBar": {
+      "import": "./dist/esm/ToolBar.js",
+      "require": "./dist/cjs/ToolBar.js",
+      "types": "./dist/esm/ToolBar.d.ts"
+    },
     "./VerticalStack": {
       "import": "./dist/esm/VerticalStack.js",
       "require": "./dist/cjs/VerticalStack.js",
@@ -180,6 +185,9 @@
       "ToggleSwitch": [
         "dist/esm/ToggleSwitch.d.ts"
       ],
+      "ToolBar": [
+        "dist/esm/ToolBar.d.ts"
+      ],
       "VerticalStack": [
         "dist/esm/VerticalStack.d.ts"
       ]
@@ -205,6 +213,6 @@
   },
   "dependencies": {
     "sass": "^1.53.0",
-    "typescript-plugin-css-modules": "^3.4.0"
+    "typescript-plugin-css-modules": "^4.1.1"
   }
 }

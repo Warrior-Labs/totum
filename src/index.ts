@@ -17,4 +17,5 @@ export { RadioGroup } from './RadioGroup';
 export { TabNav } from './TabNav';
 export { TextInput } from './TextInput';
 export { ToggleSwitch } from './ToggleSwitch';
+export { ToolBar } from './ToolBar';
 export { VerticalStack } from './VerticalStack';

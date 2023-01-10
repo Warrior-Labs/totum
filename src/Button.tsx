@@ -8,6 +8,7 @@ type ButtonProps = {
   variant?: variant;
   flat?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  ariaLabel?: string;
 } & StyleProps &
   React.PropsWithChildren;
 
@@ -29,6 +30,8 @@ export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
       className={combineCSS(classes)}
       style={props.style}
       onClick={props.onClick}
+      title={props.ariaLabel}
+      aria-label={props.ariaLabel}
     >
       {props.children}
     </button>

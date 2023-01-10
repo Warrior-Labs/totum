@@ -1,0 +1,51 @@
+@import 'root';
+
+.ToolBar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--padding, $padding);
+}
+
+.ToolBarGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .ToolBarButton {
+    font-family: var(--body-font-family, $body-font-family);
+    font-size: var(--body-font-size, $body-font-size);
+    font-weight: 500;
+    border-radius: 0;
+    border-top: 1px solid var(--overlay-5, $overlay-5);
+    border-bottom: 1px solid var(--overlay-5, $overlay-5);
+    border-left: none;
+    border-right: none;
+    background: var(--default-color, $default-color);
+    color: var(--default-color-overlay, $default-color-overlay);
+    cursor: pointer;
+    padding: $padding $padding-lg;
+    width: min-content;
+
+    > svg {
+      fill: var(--default-color-overlay, $default-color-overlay);
+    }
+
+    &:hover {
+      background: var(--default-color-dark, $default-color-dark);
+    }
+
+    &:first-of-type {
+      border-top-left-radius: var(--border-radius, $border-radius);
+      border-bottom-left-radius: var(--border-radius, $border-radius);
+      border-left: 1px solid var(--overlay-5, $overlay-5);
+    }
+
+    &:last-of-type {
+      border-top-right-radius: var(--border-radius, $border-radius);
+      border-bottom-right-radius: var(--border-radius, $border-radius);
+      border-right: 1px solid var(--overlay-5, $overlay-5);
+    }
+  }
+}

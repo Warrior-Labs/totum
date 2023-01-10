@@ -9,6 +9,7 @@ type TextInputProps = {
   variant?: variant;
   type: 'text' | 'password' | 'email' | 'number';
   label: string;
+  autoComplete?: boolean;
   required?: boolean;
   placeholder?: string;
   value?: string;
@@ -36,6 +37,7 @@ export const TextInput: React.FC<TextInputProps> = (props: TextInputProps) => {
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}
+        autoComplete={props.autoComplete ? '' : 'Off'}
       />
       <label htmlFor={props.id} className={styles.InputLabel}>
         {props.label}
